@@ -1,0 +1,97 @@
+/* Custom Animation Styles */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.floating-rocket {
+    font-size: 100px; /* Size of the rocket */
+    position: absolute; /* Allows it to float */
+    top: 50%; /* Center it vertically */
+    left: 0; /* Start from the left */
+    animation: float 3s ease-in-out infinite, moveRocket 10s linear infinite; /* Apply animations */
+    z-index: 10; /* Bring the rocket in front of other elements */
+}
+
+
+
+        body {
+            background: linear-gradient(to right, #f7f8f8, #e1e1e1);
+            color: #333;
+        }
+        .navbar {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .footer {
+            background: #343a40;
+            color: #f8f9fa;
+        }
+        .social-icons a {
+            color: #f8f9fa;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .section-header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .lead {
+            font-weight: 300;
+        }
+
+/* Move Rocket from Left to Right */
+@keyframes moveRocket {
+    0% {
+        left: -100px; /* Start outside the left edge */
+    }
+    100% {
+        left: 100%; /* Move across the screen */
+    }
+}
+
+/* Additional Styling for Cards */
+.card {
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40; /* Dark background */
+}
+
+footer a {
+    transition: color 0.3s; /* Smooth color change */
+}
+
+footer a:hover {
+    color: #f8f9fa; /* Change to a lighter color on hover */
+}

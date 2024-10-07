@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <link href="styles.css" rel="stylesheet">
+        <title>Homepage</title>
+        <style>
+            /* Custom Animation Styles */
+            @keyframes float {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            .floating-rocket {
+                font-size: 100px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                animation: float 3s ease-in-out infinite, moveRocket 10s linear infinite;
+            }
+
+            /* Move Rocket from Left to Right */
+            @keyframes moveRocket {
+                0% {
+                    left: -100px;
+                }
+
+                100% {
+                    left: 100%;
+                }
+            }
+
+            /* Phone number reveal button */
+            #phoneNumber {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Jimmy's Webpage</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="education.html">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experience.html">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Skill&Port.html">Skill&Port</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Floating Rocket Animation -->
+        <i class="fas fa-rocket floating-rocket"></i>
+
+        <!-- Hero Section -->
+        <section class="p-3 mb-2 bg-danger text-white">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Welcome to Passakorn(Jimmy) Webpage</h1>
+                <p class="lead">A comprehensive summary of my education, experience, and work portfolio.</p>
+                <a href="Skill&Port.html" class="btn btn-light btn-lg mt-3">Explore My Work <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold">Who Am I?</h2>
+                        <p class="lead">I hold an MBA with a specialization in Financial Emphasis from City University, Seattle, and a Bachelor's degree in Supply Chain Management from Thammasat University, Bangkok. Currently, I serve as an IT Business Analyst at Jaspal Public Company Limited, where I effectively bridge the gap between software and business users, focusing on CRM and technology solutions. I am passionate about technology and business transformation. My assertiveness is one of my key strengths, enabling me to balance diverse needs, timelines, and technological limitations effectively. I am eager to embark on a new journey and seek opportunities for growth that allow me to utilize and further develop my skills</p>
+                        <a href="education.html" class="btn btn-danger">Learn More About My Education</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./asset/Card.png" alt="About me image" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phone Number Reveal Section -->
+        <section class="bg-light py-5">
+            <div class="container text-center">
+                <h2 class="fw-bold">Want to Contact Me?</h2>
+                <button class="btn btn-danger" onclick="revealPhoneNumber()">Click to Reveal My Phone Number</button>
+                <p class="mt-3 lead" id="phoneNumber">+6695-293-6941</p>
+            </div>
+        </section>
+
+        <!-- JavaScript for Phone Number Reveal -->
+        <script>
+            function revealPhoneNumber() {
+                document.getElementById("phoneNumber").style.display = "block";
+            }
+        </script>
+
+        <!-- Experience Section -->
+        <section class="bg-light py-5">
+            <div class="container text-center">
+                <h2 class="fw-bold">My Professional Journey</h2>
+                <p class="lead">With years of hands-on experience, I've honed my skills across various domains and industries.</p>
+                <a href="experience.html" class="btn btn-danger">Discover My Experience</a>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold">Skill and Portfolio Highlights</h2>
+                <div class="row text-center mt-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg mb-4">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Portfolio image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Project One</h5>
+                                <p class="card-text">A description of this fantastic project that showcases my skills and creativity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg mb-4">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Portfolio image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Two</h5>
+                                <p class="card-text">An overview of another amazing project that reflects my professional growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg mb-4">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Portfolio image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Three</h5>
+                                <p class="card-text">A brief look into a project that combines innovation and skill.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="Skill&Port.html" class="btn bg-danger text-white">View Full Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer text-light py-4">
+            <div class="container text-center">
+                <p>&copy; 2024 Jimmy Webpage Powered by ChatGPT. All Rights Reserved.</p>
+                <div class="social-icons">
+                    <a href="#" class="mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-github fa-lg"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
